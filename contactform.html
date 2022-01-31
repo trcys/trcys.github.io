@@ -1,0 +1,74 @@
+<!--
+    Name: Tracy Salak
+    Date: 2021-04-18
+    Description: Contact form page
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact</title>
+
+    <!-- Links to main.css -->
+    <link rel="stylesheet" href="main.css">
+
+    <!-- Links to icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+    <div class="top-nav">
+        <a href="index.html" class="active">Home</a>
+        <a href="index.html" class="icon">
+            <i class='fa fa-arrow-left'></i>
+        </a>
+    </div>
+
+    <header class="bg-light text-center">
+        <div class="cointainer container--narrow">
+            <h1>Connect with me!</h1>
+        </div>
+    </header>
+
+    <form method="post" id="contact-form" action="mailto:tracyannesjet@hotmail.com">
+        <fieldset>
+            <legend>Contact Information</legend>
+            <hr />
+            <div class="customer-info">
+                <div class="form-field">
+                    <label for="fname" class="customerInput">First Name:</label>
+                    <input type="text" id="fname" name="fname" size="30" maxlength="15" value="" autofocus="autofocus" />					
+                    <div class="customerInput_error error" id="fname_error">* Please enter your first name.</div>
+                </div>
+                <div class="form-field">
+                    <label for="lname" class="customerInput">Last Name:</label>
+                    <input type="text" id = "lname" name="lname" size="30" maxlength="20" />
+                    <div class="customerInput_error error" id="lname_error">* Please enter your last name.</div>
+                </div>
+                <div class="form-field">
+                    <label for="email" class="customerInput">Email:</label>
+                    <input type="text" id = "email" name="email" size="30" maxlength="20" />
+                    <div class="customerInput_error error" id="email_error">* Please enter your e-mail.</div>
+                </div>
+            </div>
+            
+            <div class="form-field">
+                <label for="feedback" class="customerInput" id="comment-label">Any comments?</label><br />
+                <textarea id="feedback" name="feedback" rows="8" cols="50"></textarea>
+            </div>
+        </fieldset>
+        <fieldset>
+            <hr />
+            <input type="reset" value="Reset" />
+            <input type="submit" value="Submit" />
+        </fieldset>
+	</form>
+
+    <footer class="bg-light text-center">
+        <p>Created on April 2021</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

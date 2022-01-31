@@ -1,0 +1,413 @@
+/*
+*   Name: Tracy Salak
+*   Date: 2021-04-16
+*   Description: Main stylesheet
+*/
+
+/* Downloaded fonts */
+@font-face {
+    font-family: Code;
+    src: url(assets/fonts/code/CODE\ Light.otf);
+}
+
+@font-face {
+    font-family: Code;
+    font-weight: bold;
+    src: url(assets/fonts/code/CODE\ Bold.otf);
+}
+
+@font-face {
+    font-family: Cascadia-Code;
+    src: url(assets/fonts/cascadia-code/Cascadia.ttf);
+}
+
+/* VARs: Colour, sizes and font properties. */
+:root{
+    /* Colours used */
+    --clr-primary-200: #F3EED9;
+    --clr-primary-400: #824936;
+
+    --clr-neutral-100: #FFF;
+    --clr-neutral-600: #000;
+    --clr-neutral-900: #222C2A;
+
+    --clr-accent-300: #DDD;
+    --clr-accent-500: #B8860B;
+
+    /* Fonts used */
+    --ff-primary: 'Roboto', sans-serif;
+    --ff-accent: 'Playfair Display', serif;
+
+    --ff-heading: 'Code', sans-serif;
+    --ff-paragraph: 'Cascadia-Code', sans-serif;
+
+}
+
+/* BASE OF THE PAGE */
+*, *::before, *::after{
+    box-sizing: border-box;
+}
+
+/* Properties of the navigation bar. */
+.top-nav{
+    overflow: hidden;
+    background-color: var(--clr-neutral-100);
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 9999;
+}
+
+.top-nav #nav-links{
+    display: none;
+}
+
+.top-nav a{
+    color: #333;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+    display: block;
+}
+
+
+.top-nav a.icon{
+    background: var(--clr-neutral-600);
+    color: var(--clr-neutral-100);
+    position: absolute;
+    right: 0;
+    top: 0;
+}
+
+.top-nav a:hover{
+    background-color: var(--clr-accent-300);
+    color: var(--clr-neutral-900);
+}
+
+.active{
+    background-color: var(--clr-primary-200);
+    color: var(--clr-neutral-100);
+}
+
+ul{
+    margin: 0;
+    padding: 0;
+}
+
+li{
+    list-style-type: none;
+}
+
+/* Properties of middle content. */
+/* Sets body tag font's properties and line height. */
+body{
+    font-family: var(--ff-primary);
+    font-weight: 400;
+    font-size: 1.3125rem;
+    line-height: 1.6;
+}
+
+/* Sets margin of the main tags. */
+body, h1, h2, h3, p{
+    margin: 0;
+}
+
+h1, h2, h3{
+    font-family: var(--ff-accent);
+    color: #824936;
+    font-weight: 900;
+    line-height: 1;
+    margin-bottom: 1em;
+}
+
+/* Sets tags of h2 and p margin's top and bottom to 1em. */
+h2, p{
+    margin-bottom: 1em;
+}
+
+/* Sets the images to full size despite the browser size. */
+img{
+    display: block;
+    max-width: 100%;
+}
+
+/* Sets the class to align its center to center. */
+.text-center{
+    text-align: center;
+}
+
+footer{
+    padding: 1em 0;
+}
+
+footer p{
+    font-size: 0.5em;
+}
+
+header, section, form{
+    padding: 4rem 0;
+}
+
+@media (min-width: 40em){
+    header, section, fieldset{
+        padding: 7rem 0;
+    }
+}
+
+.container{
+    margin-left: auto;
+    margin-right: auto;
+    width: min(90%, 70.5rem);
+}
+
+.split, .customer-info{
+    display: flex;
+    flex-direction: column;
+}
+
+/* em is more consistent when zooming in and out. */
+@media (min-width: 400em){
+    .split{
+        flex-direction: row;
+    }
+
+    /* Equal spacing. */
+    .split > *{
+        flex-basis: 100%;
+    }
+
+    /* Any element that has a sibling before it gets a space. */
+    .split > * + * {
+        margin-left: 2em;
+    }
+}
+
+.container-narrow{
+    max-width: 30rem;
+}
+
+.bg-light{
+    background-color: var(--clr-primary-200);
+}
+
+.bg-primary{
+    color: var(--clr-neutral-100);
+    background-color: var(--clr-primary-400);
+}
+
+.bg-dark{
+    background-color: var(--clr-neutral-900);
+}
+
+.bg-primary h2, .bg-dark h2{
+    color: var(--clr-primary-200);
+}
+
+/* Skills section properties */
+.skill-column{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+
+.skill-category{
+    width: 50%;
+}
+
+.skill-category h2{
+    font-family: var(--ff-heading);
+}
+
+.skill-category ul{
+    font-family: var(--ff-paragraph);
+    color: var(--clr-accent-500);
+    margin-bottom: 2em;
+}
+
+@media (min-width: 40rem){
+    .skill-column{
+        flex-direction: row;
+    }
+}
+
+/* Contact form properties */
+fieldset
+{
+	margin-bottom: 30px;
+	padding: 5px;
+	border: none;
+}
+
+fieldset:last-child
+{
+	margin-bottom: 0px;
+}
+
+hr
+{
+	margin-bottom: 15px;
+}
+
+legend
+{
+	text-transform: uppercase;
+	font-weight: bold;
+	padding-bottom: 10px;
+	font-size: 14pt;
+}
+
+h3
+{
+	margin: 0px 0px 10px 0px;
+}
+
+label
+{
+	font-size: 12pt;
+}
+
+textarea{
+    resize: none;
+}
+
+@media (min-width: 400em){
+    .customer-info{
+        display: flex;
+        flex-direction: row;
+        width: fit-content;
+    }
+
+    textarea{
+        -webkit-box-sizing: border-box;
+        -moz-box-sizing: border-box;
+        box-sizing: border-box;
+        width: 40%;
+    }
+}
+
+
+.customerInput
+{
+	width: 130px;
+	display: inline-block;
+	text-align: right;
+    padding: 0 0.5em;
+}
+
+#comment-label{
+    white-space: nowrap;
+}
+
+input[type=text], input[type=submit], input[type=reset]
+{
+	padding: 5px 5px;
+}
+
+.form-field
+{
+	margin: 10px 0px;
+    padding: 0 2em;
+    display: flex;
+    flex-direction: row;
+}
+
+.bold
+{
+	font-weight: bold;
+}
+
+.left
+{
+	float: left;
+}
+
+.right
+{
+	float: right;
+}
+
+.clear
+{
+	clear: both;
+}
+
+.error
+{
+	color: red;
+	font-style: italic;
+	font-weight: bold;
+	padding: 10px 0;
+	display: none;
+}
+
+/* Projects section properties */
+/* Slideshow properties */
+.slideshow-container{
+    width: 100%;
+    position: relative;
+    margin: auto;
+}
+
+/* Hides images by default */
+.split h2{
+    font-family: var(--ff-heading);
+}
+
+.slides{
+    display: none;
+}
+
+.caption{
+    font-family: var(--ff-paragraph);
+    text-align: center;
+}
+
+img{
+    width: 80rem;
+    height: 50rem;
+    object-fit: cover;
+}
+
+.prev, .next{
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    margin-top: -22px;
+    padding: 16px;
+    color: var(--clr-neutral-100);
+    font-weight: bold;
+    font-size: 18px;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+}
+
+/* Positions the "next" button to the right side */
+.next{
+    right: 0;
+    border-radius: 3px 0 0 3px;
+}
+
+/* When hover on the arrows, background would show. */
+.prev:hover, .next:hover{
+    background-color: rgba(0,0,0,0.8);
+}
+
+/* The fading animation */
+.fade {
+    -webkit-animation-name: fade;
+    -webkit-animation-duration: 1.5s;
+    animation-name: fade;
+    animation-duration: 1.5s;
+}
+
+@-webkit-keyframes fade{
+    from{opacity: .4;}
+    to {opacity: 1;}
+}
+
+@keyframes fade{
+    from {opacity: .4;}
+    to {opacity: 1;}
+}

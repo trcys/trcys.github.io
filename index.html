@@ -1,0 +1,152 @@
+<!--
+    Name: Tracy Salak
+    Date: 2021-04-16
+    Description: Landing page
+
+    Link: https://trcys.github.io/portfolio/index.html
+
+    POSSIBLE FUTURE UPDATES IF I LIKE TO CONTINUE TO BUILD THIS:
+    - More effects on the navigation bar, "hamburger menu"
+        - Slowly bring down the nav menu
+    - Logo (My own picture)
+    - Add more in the footer
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tracy Salak's Portfolio</title>
+
+    <!-- Links to main.css -->
+    <link rel="stylesheet" href="main.css">
+
+    <!-- Links to icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+    <div class="top-nav">
+        <a href="" class="active">Home</a>
+        <div id="nav-links">
+            <ul>
+                <!-- Links to certain sections of the page. -->
+                <li><a href="#about">About</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#project">Project</a></li>
+                <li><a href="contactform.html">Contact</a></li>
+            </ul>
+        </div>
+        <a href="javascript:void(0);" class="icon" onclick="navBar()">
+            <i class="fa fa-bars"></i>
+        </a>
+    </div>
+
+    <header class="bg-light text-center">
+        <div class="cointainer container--narrow">
+            <p>PORTFOLIO</p>
+            <h1>Tracy Salak</h1>
+        </div>
+    </header>
+
+    <section id="about">
+        <div class="container">
+            <h2 class="text-center">About</h2>
+            <div class="split">
+                <div>
+                    <p>Hello, I'm Tracy Anne Salak and I like to mess around with computers and cars! I'm currently taking Business Information Technology
+                        at Red River College, Winnipeg. This site is purely for educational purposes.
+                    </p>
+                </div>
+                <div>
+                    <p>This site is my first work to design and develop a site. There isn't a lot because I wanted to focus on creating a 
+                        responsive and simplistic design of the webpage.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="bg-dark" id="skills">
+        <div class="container">
+            <div class="split">
+                <div>
+                    <h2>Skills</h2>
+                </div>
+                <div class="skill-column">
+                    <div class="skill-category">
+                        <h2>Platforms</h2>
+                        <ul>
+                            <li>Visual Studios/Code</li>
+                        </ul>
+                    </div>
+                    <div class="skill-category">
+                        <h2>Languages</h2>
+                        <ul>
+                            <li>Java</li>
+                            <li>C#</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="skill-column">
+                    <div class="skill-category">
+                        <h2>Operating Systems</h2>
+                        <ul>
+                            <li>Windows 10</li>
+                            <li>Arch Linux</li>
+                        </ul>
+                    </div>
+                    <div class="skill-category">
+                        <h2>Hobbies</h2>
+                        <ul>
+                            <li>Building PCs</li>
+                            <li>Modifying cars</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <section class="bg-primary" id="project" >
+        <div class="container">
+            <div class="split">
+                <div>
+                    <h2>Projects</h2>
+                </div>
+                <h2>PC Assembly!</h2>
+                <!-- Picture slides -->
+                <div class="slideshow-container">
+                    <div class="slides fade">
+                        <div class="numtext"></div>
+                        <img src="assets/images/assembly/1.jpg" alt="">
+                        <div class="caption">Test Run</div>
+                    </div>
+                    <div class="slides fade">
+                        <div class="numtext"></div>
+                        <img src="assets/images/assembly/2.jpg" alt="">
+                        <div class="caption">Inside of the PC</div>
+                    </div>
+                    <div class="slides fade">
+                        <div class="numtext"></div>
+                        <img src="assets/images/assembly/3.png" alt="">
+                        <div class="caption">After</div>
+                    </div>
+                    <!-- Next and previous buttons -->
+                    <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+                    <a class="next" onclick="plusSlides(1)">&#10095;</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="bg-light text-center">
+        <p>Created on April 2021</p>
+        <a href="https://www.linkedin.com/in/tracysalak">
+            <i class="fa fa-linkedin-square"></i>
+        </a>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

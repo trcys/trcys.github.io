@@ -1,0 +1,31 @@
+w3schools:
+//Navigation bar
+https://www.w3schools.com/howto/howto_js_mobile_navbar.asp
+https://www.w3schools.com/howto/tryit.asp?filename=tryhow_js_topnav
+
+//Slideshow
+https://www.w3schools.com/howto/howto_js_slideshow.asp
+
+//More Icons
+https://www.w3schools.com/icons/fontawesome5_icons_arrows.asp
+https://www.w3schools.com/icons/tryit.asp?filename=tryicons_fa-linkedin-square
+
+Fonts:
+//Code
+https://www.dafont.com/code.font
+
+//Cascadia Code
+https://www.fontsquirrel.com/fonts/cascadia-code
+
+//How to install fonts
+https://stackoverflow.com/questions/7961721/how-do-i-install-a-custom-font-on-an-html-site
+
+YouTube:
+// Kevin Powell - CSS Master!
+https://www.youtube.com/channel/UCJZv4d5rbIKd4QHMPkcABCw
+
+//Base responive page
+https://www.youtube.com/watch?v=bn-DQCifeQQ
+
+//Simplifying CSS
+https://www.youtube.com/watch?v=McC4QkCvbaY&t=3s
